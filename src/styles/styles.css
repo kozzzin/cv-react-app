@@ -1,0 +1,234 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo:wght@100;300;400;700;900&display=swap');
+
+* {
+  font-family: 'Exo', sans-serif;
+}
+
+.cv-app-container {
+  display: grid;
+  grid-template-columns: 3fr 7fr;
+}
+
+.cv-form-container {
+  margin: 0 2rem;
+  display: flex;
+  justify-content: flex-end;
+}
+
+form {
+  max-width: 400px;
+  min-width: 300px;
+}
+
+form input {
+  display: block;
+  margin: 5px 0;
+  clear: both;
+}
+
+textarea {
+  margin-bottom: 10px;
+  min-height: 8rem;
+}
+
+fieldset > fieldset textarea {
+  min-height: 3rem;
+}
+
+form fieldset {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+}
+
+form > fieldset {
+  margin-bottom: 2rem;
+}
+
+fieldset > fieldset {
+  margin-bottom: 1rem;
+}
+
+.add {
+  background-color: lightgreen;
+}
+
+.delete {
+  background-color: lightcoral;
+}
+
+.print {
+  padding: 1rem 2rem;
+  margin-bottom: 2rem;
+  background-color: black;
+  color: #fff;
+}
+
+.print:hover {
+  background-color: lightgreen;
+  color: black;
+}
+
+button {
+  font-weight: 700;
+  cursor: pointer;
+  appearance: none;
+  border: 0;
+  padding: 0.5rem 0;
+}
+
+button:hover {
+  filter: brightness(1.4);
+}
+
+.cv-result-container {
+  box-shadow: 0 0 10px rgba(0,0,0,.2);
+  width: fit-content;
+  margin-bottom: 3rem;
+}
+
+
+.cv-container {
+  margin: 3rem 3rem;
+  max-width: 900px;
+}
+
+.header-container {
+  border-top: 5px solid black;
+  /* border-bottom: 5px solid black; */
+  padding: 2rem 0;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+
+.name-container {
+  display: inline-block;
+  text-align: left;
+  max-width: 80%;
+}
+
+.name-container h1 {
+  font-size: 2rem;
+  font-weight: 900;
+}
+
+.contacts-container {
+  display: flex;
+  align-items: center;
+}
+
+.contacts {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  text-align: right;
+}
+
+.contacts li {
+  margin-top: 0.5rem;
+}
+
+.contacts li:nth-last-child() {
+  margin-bottom: 0.5rem;
+}
+
+.section-container {
+  border-top: 5px solid black;
+  margin-bottom: 5rem;
+}
+
+.section-name {
+  font-size: 2rem;
+  font-weight: 700;
+  margin: 1.5rem 0 2rem;
+  text-align: left;
+}
+
+.section-content {
+  margin-left: 11rem;
+  text-align: left;
+
+}
+
+.about-content,
+.skills-content {
+  font-size: 1.5rem;
+  text-align: left;
+  font-weight: 300;
+  line-height: 1.5;
+}
+
+.section-card-container {
+  display: flex;
+  flex-flow: row wrap; 
+  margin-bottom: 3rem;
+}
+
+.section-card-header-container {
+  display: flex;
+  width: 100%;
+  gap: 0.5rem;
+}
+
+.section-card-header-heading {
+  width: fit-content;
+  flex: 0 0 1;
+}
+
+.section-card-header-heading h4 {
+  margin: 0;
+  display: inline-block;
+  width: fit-content;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.section-card-header-dates {
+  flex: 1 1 0;
+  font-size: 1rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 5px;
+}
+
+.section-card-subheading-container {
+  width: 100%;
+}
+
+.section-card-subheading-container h5 {
+  font-size: 1rem;
+  font-weight: 700;
+  margin: 0.3rem 0 0;
+}
+
+.section-card-list-container ul {
+  list-style: none;
+  margin: 1rem 0 0;
+  padding: 0;
+}
+
+.section-card-list-container li::before {
+  content: ' — ';
+  opacity: 0.5;
+}
+
+
+@media print {
+  @media print {
+    body * {
+      visibility: hidden;
+    }
+    .cv-result-container, .cv-result-container * {
+      visibility: visible;
+    }
+    .cv-result-container {
+      position: absolute;
+      left: 0;
+      top: 0;
+    }
+  }
+}
