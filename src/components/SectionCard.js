@@ -1,4 +1,5 @@
 import React from "react";
+import uniqId from 'uniqid';
 
 class SectionCard extends React.Component {
   constructor(props) {

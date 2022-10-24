@@ -117,7 +117,7 @@ class FormCV extends React.Component {
           <legend>Skills</legend>
           <textarea value={ skills } onChange={ this.props.changer }  name="skills"></textarea>
         </fieldset>
-        <button className="print" onClick = { this.props.save }>SAVE</button>&nbsp;
+        <button className="print" onClick = { this.props.save }>SAVE</button>nbsp;
         <button className="print" onClick = { this.props.print }>PRINT</button>
       </form>
     );
