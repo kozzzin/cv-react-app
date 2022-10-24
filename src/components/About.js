@@ -1,21 +1,15 @@
 import React from "react";
 import Section from "./Section";
 
-class About extends React.Component {
-  constructor(props) {
-    super(props);
+
+export default function About(props) {
+
+  function aboutContent() {
+    return <p className="about-content">{ props.info }</p>;
   }
 
-  aboutContent() {
-    return <p className="about-content">{ this.props.info }</p>;
-  }
-
-  render() {
-    return <Section
-      sectionName='About'
-      sectionContent={this.aboutContent()}
-    /> 
-  }
+  return <Section
+    sectionName='About'
+    sectionContent={aboutContent()}
+  /> 
 }
-
-export default About;

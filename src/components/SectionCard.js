@@ -1,31 +1,23 @@
 import React from "react";
-import uniqId from 'uniqid';
 
-class SectionCard extends React.Component {
-  constructor(props) {
-    super(props);
-  }
-
-  render() {
+export default function SectionCard(props) {
     return (
       <div className="section-card-container">
         <div className="section-card-header-container">
           <div className="section-card-header-heading">
-            <h4>{ this.props.cardHeading }</h4>
+            <h4>{ props.cardHeading }</h4>
           </div>
           <div className="section-card-header-dates">
-            <span>{ this.props.cardStartDate }</span>&nbsp; - &nbsp;<span>{ this.props.cardEndDate }</span>
+            <span>{ props.cardStartDate }</span>&nbsp; - &nbsp;<span>{ props.cardEndDate }</span>
           </div>
         </div>
         <div className="section-card-subheading-container">
-          <h5>{ this.props.cardSubHeading }</h5>
+          <h5>{ props.cardSubHeading }</h5>
         </div>
         <div className="section-card-list-container">
-          <p>{ this.props.info }</p>
+          <p>{ props.info }</p>
         </div>
       </div>
     );
-  }
 }
 
-export default SectionCard;

@@ -2,14 +2,11 @@ import React from "react";
 import Section from "./Section";
 import SectionCard from "./SectionCard";
 
-class Career extends React.Component {
-  constructor(props) {
-    super(props);
-  }
+export default function Career(props) {
 
-  careerContent() {
+  function careerContent() {
     return (
-      this.props.cards.map(
+      props.cards.map(
         (card, index) => {
           return (
             <SectionCard 
@@ -26,13 +23,12 @@ class Career extends React.Component {
     );
   }
 
-  render() {
-    return <Section
-      sectionName='Career'
-      sectionContent={this.careerContent()}
-    /> 
-  }
+
+  return <Section
+    sectionName='Career'
+    sectionContent={careerContent()}
+  /> 
+
 }
 
 
-export default Career;

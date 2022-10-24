@@ -2,14 +2,11 @@ import React from "react";
 import Section from "./Section";
 import SectionCard from "./SectionCard";
 
-class Education extends React.Component {
-  constructor(props) {
-    super(props);
-  }
+export default function Education(props) {
 
-  educationContent() {
+  function educationContent() {
     return (
-      this.props.cards.map(
+      props.cards.map(
         (card, index) => {
           return (
             <SectionCard
@@ -24,15 +21,11 @@ class Education extends React.Component {
         }
       )
     );
-    }
-
-  render() {
-    return <Section
-      sectionName='Education'
-      sectionContent={this.educationContent()}
-    /> 
   }
+
+  return <Section
+    sectionName='Education'
+    sectionContent={educationContent()}
+  /> 
+
 }
-
-
-export default Education;

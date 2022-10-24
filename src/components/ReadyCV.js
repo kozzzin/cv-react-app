@@ -8,52 +8,44 @@ import Skills from './Skills';
 
 
 
-class ReadyCV extends React.Component {
-  constructor(props) {
-    super(props);
-  }
+export default function ReadyCV(props) {
+  const {
+    name,
+    surname,
+    tel,
+    site,
+    geo,
+    email,
+    about,
+    career,
+    education,
+    skills
+  } = props.data;
 
-
-  render() {
-    const {
-      name,
-      surname,
-      tel,
-      site,
-      geo,
-      email,
-      about,
-      career,
-      education,
-      skills
-    } = this.props.data;
-
-    return (
-      <div className="cv-container">
-        <Header
-          name = { name }
-          surname = { surname }
-          site = { site }
-          email = { email }
-          tel = { tel }
-          geo = { geo }
-         />
-        <About
-          info = { about }
+  return (
+    <div className="cv-container">
+      <Header
+        name = { name }
+        surname = { surname }
+        site = { site }
+        email = { email }
+        tel = { tel }
+        geo = { geo }
         />
-        <Career
-          cards = { career }
-        />
-        <Education
-          cards = { education }
-        />
-        <Skills
-          info = { skills }
-        />
-      </div>
-    );
-  }
+      <About
+        info = { about }
+      />
+      <Career
+        cards = { career }
+      />
+      <Education
+        cards = { education }
+      />
+      <Skills
+        info = { skills }
+      />
+    </div>
+  );
 }
 
 
-export default ReadyCV;
